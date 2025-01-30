@@ -118,4 +118,14 @@ public class ScoreboardTest {
 
         assertTrue(summary.isEmpty(), "Summary should be empty when there are no matches");
     }
+
+    @Test
+    void shouldNotAllowedToAddSameTeamIfItIsInMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+
+        assertThrows(IllegalArgumentException.class, () ->
+                        scoreboard.startMatch("Team A", "Team C"),
+                "Team A is currently in match");
+    }
 }
