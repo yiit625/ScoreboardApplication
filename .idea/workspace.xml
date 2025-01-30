@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Project Skeleton created automatically, nothing developed">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Should Start Match test is implemented">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ScoreboardTest.shouldStartNewMatch">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
       <module name="ScoreboardApplication" />
@@ -75,8 +73,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreboardTest.shouldStartNewMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldStartNewMatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatch" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -89,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="1405000" />
+      <workItem from="1738232849018" duration="2150000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -107,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738233033932</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Should Start Match test is implemented">
+      <option name="closed" value="true" />
+      <created>1738234574659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738234574659</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +165,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Skeleton created automatically, nothing developed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Skeleton created automatically, nothing developed" />
+    <MESSAGE value="Should Start Match test is implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Should Start Match test is implemented" />
   </component>
 </project>
