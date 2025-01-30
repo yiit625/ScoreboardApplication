@@ -7,7 +7,6 @@ import org.com.sportsdata.validators.MatchValidator;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 public class Scoreboard {
     private final List<Match> matches = new ArrayList<>();
