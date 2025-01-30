@@ -20,4 +20,12 @@ public class ScoreboardTest {
         scoreboard.finishMatch("Team A", "Team B");
         assertEquals(0, scoreboard.getMatchesInProgress().size());
     }
+
+    @Test
+    void shouldUpdateMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+        scoreboard.updateScore("Team A", "Team B", 2 /*First Team Score */, 1 /*Second Team Score */);
+        assertEquals("Team A 2-1 Team B", scoreboard.getMatchScore("Team A", "Team B"));
+    }
 }
