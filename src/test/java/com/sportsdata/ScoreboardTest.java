@@ -9,7 +9,15 @@ public class ScoreboardTest {
     @Test
     void shouldStartNewMatch() {
         Scoreboard scoreboard = new Scoreboard();
-        scoreboard.startMatch();
+        scoreboard.startMatch("Team A", "Team B");
         assertEquals(1, scoreboard.getMatchesInProgress().size());
+    }
+
+    @Test
+    void shouldFinishMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+        scoreboard.finishMatch("Team A", "Team B");
+        assertEquals(0, scoreboard.getMatchesInProgress().size());
     }
 }
