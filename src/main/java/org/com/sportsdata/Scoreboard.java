@@ -2,6 +2,7 @@ package org.com.sportsdata;
 
 import org.com.sportsdata.comparator.MatchComparator;
 import org.com.sportsdata.model.Match;
+import org.com.sportsdata.validators.MatchValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,15 +12,9 @@ public class Scoreboard {
     private final List<Match> matches = new ArrayList<>();
 
     public void startMatch(String homeTeam, String awayTeam) {
-        if (homeTeam.isBlank() || awayTeam.isBlank()) {
-            throw new IllegalArgumentException("Team names cannot be blank");
-        }
-        if (homeTeam.equals(awayTeam)) {
-            throw new IllegalArgumentException("Team names cannot be same name");
-        }
-        if (matchExists(homeTeam, awayTeam)) {
-            throw new IllegalArgumentException("Match between these teams is already in progress");
-        }
+        MatchValidator.validateTeams(homeTeam, awayTeam);
+        MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
+
         matches.add(new Match(homeTeam, awayTeam));
     }
 
@@ -29,6 +24,7 @@ public class Scoreboard {
     }
 
     public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
+        MatchValidator.validateScores(homeScore, awayScore);
         Match match = findMatch(homeTeam, awayTeam);
         matches.remove(match);
         matches.add(match.updateScore(homeScore, awayScore));
@@ -39,10 +35,6 @@ public class Scoreboard {
                 .sorted(new MatchComparator())
                 .map(Match::getSummary)
                 .toList();
-    }
-
-    private boolean matchExists(String homeTeam, String awayTeam) {
-        return matches.stream().anyMatch(m -> m.homeTeam().equals(homeTeam) && m.awayTeam().equals(awayTeam));
     }
 
     private Match findMatch(String homeTeam, String awayTeam) {

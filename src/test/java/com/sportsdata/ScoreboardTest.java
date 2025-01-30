@@ -22,7 +22,7 @@ public class ScoreboardTest {
     void shouldUpdateMatch() {
         Scoreboard scoreboard = new Scoreboard();
         scoreboard.startMatch("Team A", "Team B");
-        scoreboard.updateScore("Team A", "Team B", 2 /*First Team Score */, 1 /*Second Team Score */);
+        scoreboard.updateScore("Team A", "Team B", 2 , 1 );
 
         var summary = scoreboard.getSummary();
         assertEquals("Team A 2-1 Team B", summary.get(0));
