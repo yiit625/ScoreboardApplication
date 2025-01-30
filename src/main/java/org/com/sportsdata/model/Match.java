@@ -6,9 +6,6 @@ public record Match (String homeTeam, String awayTeam, int homeScore, int awaySc
     }
 
     public Match updateScore (int homeScore, int awayScore) {
-        if (homeScore < 0 || awayScore < 0) {
-            throw new IllegalArgumentException("Scores cannot be negative");
-        }
        return new Match(homeTeam, awayTeam, homeScore, awayScore, startTime);
     }
 
