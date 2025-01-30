@@ -12,8 +12,12 @@ public class Scoreboard {
         this.matches = new ArrayList<>();
     }
 
-    public void startMatch() {
-        matches.add(new Match());
+    public void startMatch(String homeTeam, String awayTeam) {
+        matches.add(new Match(homeTeam, awayTeam));
+    }
+
+    public void finishMatch(String homeTeam, String awayTeam) {
+        matches.removeIf(match -> match.getHomeTeam().equals(homeTeam) && match.getAwayTeam().equals(awayTeam));
     }
 
     public List<Match> getMatchesInProgress() {

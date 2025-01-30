@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Should Start Match and Match model has been implemented">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Should Finish Match Test is implemented">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
     </list>
@@ -120,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="2382000" />
+      <workItem from="1738232849018" duration="2980000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -162,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738235205640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Should Start Match and Match model has been implemented">
+      <option name="closed" value="true" />
+      <created>1738235275659</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738235275659</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Should Finish Match Test is implemented">
+      <option name="closed" value="true" />
+      <created>1738235517682</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738235517682</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +214,7 @@
     <MESSAGE value="Project Skeleton created automatically, nothing developed" />
     <MESSAGE value="Should Start Match test is implemented" />
     <MESSAGE value="Should Start Match and Match model has been implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Should Start Match and Match model has been implemented" />
+    <MESSAGE value="Should Finish Match Test is implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Should Finish Match Test is implemented" />
   </component>
 </project>
