@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Finish match is implemented, Match model and Start new Match is updated.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Should Update Match Score Test is implemented">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="3302000" />
+      <workItem from="1738232849018" duration="4047000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -184,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738235926247</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Should Update Match Score Test is implemented">
+      <option name="closed" value="true" />
+      <created>1738236446413</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738236446413</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +232,7 @@
     <MESSAGE value="Should Start Match and Match model has been implemented" />
     <MESSAGE value="Should Finish Match Test is implemented" />
     <MESSAGE value="Finish match is implemented, Match model and Start new Match is updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish match is implemented, Match model and Start new Match is updated." />
+    <MESSAGE value="Should Update Match Score Test is implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Should Update Match Score Test is implemented" />
   </component>
 </project>

@@ -20,6 +20,24 @@ public class Scoreboard {
         matches.removeIf(match -> match.getHomeTeam().equals(homeTeam) && match.getAwayTeam().equals(awayTeam));
     }
 
+    public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
+        for (Match match: matches) {
+            if (match.getHomeTeam().equals(homeTeam) && match.getAwayTeam().equals(awayTeam)) {
+                match.setScore(homeScore, awayScore);
+                return;
+            }
+        }
+    }
+
+    public String getMatchScore(String homeTeam, String awayTeam) {
+        for (Match match : matches) {
+            if (match.getHomeTeam().equals(homeTeam) && match.getAwayTeam().equals(awayTeam)) {
+                return match.toString();
+            }
+        }
+        return null;
+    }
+
     public List<Match> getMatchesInProgress() {
         return new ArrayList<>(matches);
     }
