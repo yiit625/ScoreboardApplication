@@ -28,4 +28,18 @@ public class ScoreboardTest {
         scoreboard.updateScore("Team A", "Team B", 2 /*First Team Score */, 1 /*Second Team Score */);
         assertEquals("Team A 2-1 Team B", scoreboard.getMatchScore("Team A", "Team B"));
     }
+
+    @Test
+    void shouldReturnSummaryOrderByTotalScore() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+        scoreboard.startMatch("Team C", "Team D");
+        scoreboard.updateScore("Team A", "Team B", 2 , 2 );
+        scoreboard.updateScore("Team C", "Team D", 4 , 1 );
+
+        var summary = scoreboard.getSummary();
+        assertEquals("Team C 4-1 Team D", summary.get(1)); // Highest Total Score
+        assertEquals("Team A 2-2 Team B", summary.get(0)); // Lowest Total Score
+
+    }
 }
