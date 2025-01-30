@@ -4,23 +4,18 @@ import org.com.sportsdata.Scoreboard;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ScoreboardTest {
     @Test
     void shouldStartNewMatch() {
         Scoreboard scoreboard = new Scoreboard();
         scoreboard.startMatch("Team A", "Team B");
-        assertEquals(1, scoreboard.getMatchesInProgress().size());
-    }
-
-    @Test
-    void shouldFinishMatch() {
-        Scoreboard scoreboard = new Scoreboard();
-        scoreboard.startMatch("Team A", "Team B");
-        scoreboard.finishMatch("Team A", "Team B");
-        assertEquals(0, scoreboard.getMatchesInProgress().size());
+        assertEquals(1, scoreboard.getSummary().size());
     }
 
     @Test
@@ -28,7 +23,17 @@ public class ScoreboardTest {
         Scoreboard scoreboard = new Scoreboard();
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.updateScore("Team A", "Team B", 2 /*First Team Score */, 1 /*Second Team Score */);
-        assertEquals("Team A 2-1 Team B", scoreboard.getMatchScore("Team A", "Team B"));
+
+        var summary = scoreboard.getSummary();
+        assertEquals("Team A 2-1 Team B", summary.get(0));
+    }
+
+    @Test
+    void shouldFinishMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+        scoreboard.finishMatch("Team A", "Team B");
+        assertTrue(scoreboard.getSummary().isEmpty());
     }
 
     @Test
@@ -69,6 +74,25 @@ public class ScoreboardTest {
     }
 
     @Test
+    void shouldNotBeSameNameHomeAndAwayTeam() {
+        Scoreboard scoreboard = new Scoreboard();
+        assertThrows(IllegalArgumentException.class, () ->
+                        scoreboard.startMatch("Team A", "Team A"),
+                "Team names cannot be same name");
+    }
+
+    @Test
+    void shouldNotBeBlankHomeOrAwayTeam() {
+        Scoreboard scoreboard = new Scoreboard();
+        assertThrows(IllegalArgumentException.class, () ->
+                        scoreboard.startMatch("", "Team B"),
+                "Team names cannot be blank");
+        assertThrows(IllegalArgumentException.class, () ->
+                        scoreboard.startMatch("Team A", ""),
+                "Team names cannot be blank");
+    }
+
+    @Test
     void shouldNotAllowNegativeScores() {
         Scoreboard scoreboard = new Scoreboard();
         scoreboard.startMatch("Team A", "Team B");
@@ -82,21 +106,12 @@ public class ScoreboardTest {
     }
 
     @Test
-    void shouldNotUpdateScoreForNonExistentMatch() {
+    void shouldNotUpdateScoreOrFinishMatchForNonExistentMatch() {
         Scoreboard scoreboard = new Scoreboard();
 
-        assertThrows(IllegalArgumentException.class, () ->
+        assertThrows(NoSuchElementException.class, () ->
                 scoreboard.updateScore("Team X", "Team Y", 1, 2),
-                "Non existent matches cannot be updated");
-    }
-
-    @Test
-    void shouldNotFinishingNonExistentMatch() {
-        Scoreboard scoreboard = new Scoreboard();
-
-        assertThrows(IllegalArgumentException.class, () ->
-                        scoreboard.finishMatch("Team X", "Team Y"),
-                "Non existent matches cannot be finished");
+                "Match cannot be found");
     }
 
     @Test

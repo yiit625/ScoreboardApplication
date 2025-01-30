@@ -15,11 +15,6 @@ public class Match {
         this.startTime = System.nanoTime();
     }
 
-    public void setScore (int homeScore, int awayScore) {
-        this.homeScore = homeScore;
-        this.awayScore = awayScore;
-    }
-
     public String getHomeTeam() {
         return homeTeam;
     }
@@ -28,12 +23,21 @@ public class Match {
         return awayTeam;
     }
 
+
+    public long getStartTime() {
+        return startTime;
+    }
+
     public int getTotalScore() {
         return homeScore + awayScore;
     }
 
-    public long getStartTime() {
-        return startTime;
+    public void updateScore (int homeScore, int awayScore) {
+        if (homeScore < 0 || awayScore < 0) {
+            throw new IllegalArgumentException("Scores cannot be negative");
+        }
+        this.homeScore = homeScore;
+        this.awayScore = awayScore;
     }
 
     @Override
