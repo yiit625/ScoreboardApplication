@@ -26,6 +26,10 @@ public class Match {
         return awayTeam;
     }
 
+    public int getTotalScore() {
+        return homeScore + awayScore;
+    }
+
     @Override
     public String toString() {
         return homeTeam + " " + homeScore + "-" + awayScore + " " + awayTeam;

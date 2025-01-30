@@ -3,6 +3,7 @@ package org.com.sportsdata;
 import org.com.sportsdata.model.Match;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Scoreboard {
@@ -27,6 +28,13 @@ public class Scoreboard {
                 return;
             }
         }
+    }
+
+    public List<String> getSummary() {
+        return matches.stream()
+                .sorted(Comparator.comparingInt(Match :: getTotalScore))
+                .map(Match::toString)
+                .toList();
     }
 
     public String getMatchScore(String homeTeam, String awayTeam) {
