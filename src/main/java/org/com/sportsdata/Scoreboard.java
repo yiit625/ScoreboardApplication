@@ -5,16 +5,22 @@ import org.com.sportsdata.model.Match;
 import org.com.sportsdata.util.MatchFinder;
 import org.com.sportsdata.validators.MatchValidator;
 
+import java.time.Clock;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Scoreboard {
     private final List<Match> matches = new ArrayList<>();
+    private final Clock clock;
+
+    public Scoreboard(Clock clock) {
+        this.clock = clock;
+    }
 
     public void startMatch(String homeTeam, String awayTeam) {
         MatchValidator.validateTeams(matches, homeTeam, awayTeam);
         MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
-        matches.add(new Match(homeTeam, awayTeam));
+        matches.add(new Match(homeTeam, awayTeam, clock));
     }
 
     public void finishMatch(String homeTeam, String awayTeam) {

@@ -1,10 +1,11 @@
 package org.com.sportsdata;
 
+import java.time.Clock;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(Clock.systemUTC());
         Scanner scanner = new Scanner(System.in);
 
         while(true) {

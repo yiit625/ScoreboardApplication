@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Removed unused import statement">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Clean code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ScoreboardTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
       <module name="ScoreboardApplication" />
@@ -105,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldReturnEmptySummaryWhenNoMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardTest.shouldStartNewMatchWithMockedClock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +117,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata" />
       <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldReturnEmptySummaryWhenNoMatch" />
+      <option name="METHOD_NAME" value="shouldStartNewMatchWithMockedClock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScoreboardTest" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ScoreboardTest" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatchWithMockedClock" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" />
         <item itemvalue="JUnit.ScoreboardTest.shouldUpdateMatch" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldReturnEmptySummaryWhenNoMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="21683000" />
+      <workItem from="1738232849018" duration="22424000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -373,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738256087591</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Clean code">
+      <option name="closed" value="true" />
+      <created>1738258812356</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1738258812357</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +441,8 @@
     <MESSAGE value="Validation removed from Match model" />
     <MESSAGE value="Moved functionality out of Scoreboard" />
     <MESSAGE value="Removed unused import statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unused import statement" />
+    <MESSAGE value="Clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

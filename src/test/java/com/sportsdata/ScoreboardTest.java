@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.time.Clock;
+import java.time.Instant;
+import java.time.ZoneId;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -12,16 +15,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ScoreboardTest {
+    Clock fixedClock = Clock.fixed(Instant.parse("2024-01-30T12:00:00Z"), ZoneId.of("UTC"));
+
     @Test
     void shouldStartNewMatch() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         assertEquals(1, scoreboard.getSummary().size());
     }
 
     @Test
     void shouldUpdateMatch() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.updateScore("Team A", "Team B", 2 , 1 );
 
@@ -30,7 +35,7 @@ public class ScoreboardTest {
 
     @Test
     void shouldFinishMatch() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.finishMatch("Team A", "Team B");
         assertTrue(scoreboard.getSummary().isEmpty());
@@ -38,7 +43,7 @@ public class ScoreboardTest {
 
     @Test
     void shouldReturnSummaryOrderByTotalScore() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.startMatch("Team C", "Team D");
         scoreboard.updateScore("Team A", "Team B", 2 , 2 );
@@ -56,21 +61,21 @@ public class ScoreboardTest {
             "Team A, , Team names cannot be blank"
     })
     void shouldValidateTeamNames(String homeTeam, String awayTeam, String expectedMessage) {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         Exception exception = assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch(homeTeam, awayTeam));
         assertEquals(expectedMessage, exception.getMessage());
     }
 
     @Test
     void shouldNotStartMatchWithSameTeamsTwice() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch("Team A", "Team B"));
     }
 
     @Test
     void shouldNotAllowDuplicateTeamParticipation() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch("Team A", "Team C"));
     }
@@ -81,7 +86,7 @@ public class ScoreboardTest {
             "2, -1, Scores cannot be negative"
     })
     void shouldNotAllowNegativeScores(int homeScore, int awayScore, String expectedMessage) {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 scoreboard.updateScore("Team A", "Team B", homeScore, awayScore));
@@ -90,14 +95,14 @@ public class ScoreboardTest {
 
     @Test
     void shouldNotUpdateScoreOrFinishNonExistentMatch() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         assertThrows(NoSuchElementException.class, () ->
                 scoreboard.updateScore("Team X", "Team Y", 1, 2));
     }
 
     @Test
     void shouldReturnEmptySummaryWhenNoMatch() {
-        Scoreboard scoreboard = new Scoreboard();
+        Scoreboard scoreboard = new Scoreboard(fixedClock);
         assertTrue(scoreboard.getSummary().isEmpty());
     }
 }
