@@ -1,9 +1,11 @@
 package com.sportsdata;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.com.sportsdata.Scoreboard;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ScoreboardTest {
     @Test
@@ -44,7 +46,7 @@ public class ScoreboardTest {
     }
 
     @Test
-    void shouldReturnSummaryOrderByTotalScore_sameTotalScore() {
+    void shouldReturnSummaryOrderByTotalScoreWithSameTotalScore() {
         Scoreboard scoreboard = new Scoreboard();
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.startMatch("Team C", "Team D");
@@ -54,6 +56,54 @@ public class ScoreboardTest {
         var summary = scoreboard.getSummary();
         assertEquals("Team C 3-1 Team D", summary.get(0));
         assertEquals("Team A 2-2 Team B", summary.get(1));
+    }
 
+    @Test
+    void shouldNotStartMatchWithSameTeamsTwice() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+
+        assertThrows(IllegalArgumentException.class, () ->
+                scoreboard.startMatch("Team A", "Team B"),
+                "Match between these teams is already in progress");
+    }
+
+    @Test
+    void shouldNotAllowNegativeScores() {
+        Scoreboard scoreboard = new Scoreboard();
+        scoreboard.startMatch("Team A", "Team B");
+
+        assertThrows(IllegalArgumentException.class, () ->
+                scoreboard.updateScore("Team A", "Team B", -1, 2),
+                "Scores cannot be negative");
+        assertThrows(IllegalArgumentException.class, () ->
+                scoreboard.updateScore("Team A", "Team B", 1, -2),
+                "Scores cannot be negative");
+    }
+
+    @Test
+    void shouldNotUpdateScoreForNonExistentMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+
+        assertThrows(IllegalArgumentException.class, () ->
+                scoreboard.updateScore("Team X", "Team Y", 1, 2),
+                "Non existent matches cannot be updated");
+    }
+
+    @Test
+    void shouldNotFinishingNonExistentMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+
+        assertThrows(IllegalArgumentException.class, () ->
+                        scoreboard.finishMatch("Team X", "Team Y"),
+                "Non existent matches cannot be finished");
+    }
+
+    @Test
+    void shouldReturnEmptySummaryWhenNoMatch() {
+        Scoreboard scoreboard = new Scoreboard();
+        List<String> summary = scoreboard.getSummary();
+
+        assertTrue(summary.isEmpty(), "Summary should be empty when there are no matches");
     }
 }
