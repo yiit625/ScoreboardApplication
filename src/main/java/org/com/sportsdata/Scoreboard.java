@@ -30,23 +30,24 @@ public class Scoreboard {
 
     public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
         Match match = findMatch(homeTeam, awayTeam);
-        match.updateScore(homeScore, awayScore);
+        matches.remove(match);
+        matches.add(match.updateScore(homeScore, awayScore));
     }
 
     public List<String> getSummary() {
         return matches.stream()
                 .sorted(new MatchComparator())
-                .map(Match::toString)
+                .map(Match::getSummary)
                 .toList();
     }
 
     private boolean matchExists(String homeTeam, String awayTeam) {
-        return matches.stream().anyMatch(m -> m.getHomeTeam().equals(homeTeam) && m.getAwayTeam().equals(awayTeam));
+        return matches.stream().anyMatch(m -> m.homeTeam().equals(homeTeam) && m.awayTeam().equals(awayTeam));
     }
 
     private Match findMatch(String homeTeam, String awayTeam) {
         return matches.stream()
-                .filter(m -> m.getHomeTeam().equals(homeTeam) && m.getAwayTeam().equals(awayTeam))
+                .filter(m -> m.homeTeam().equals(homeTeam) && m.awayTeam().equals(awayTeam))
                 .findFirst()
                 .orElseThrow(() -> new NoSuchElementException("Match cannot be found"));
     }

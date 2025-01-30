@@ -1,47 +1,22 @@
 package org.com.sportsdata.model;
 
-public class Match {
-    private final String homeTeam;
-    private final String awayTeam;
-    private int homeScore;
-    private int awayScore;
-    private final long startTime;
-
+public record Match (String homeTeam, String awayTeam, int homeScore, int awayScore, long startTime) {
     public Match(String homeTeam, String awayTeam) {
-        this.homeTeam = homeTeam;
-        this.awayTeam = awayTeam;
-        this.homeScore = 0;
-        this.awayScore = 0;
-        this.startTime = System.nanoTime();
+        this(homeTeam, awayTeam, 0, 0, System.nanoTime());
     }
 
-    public String getHomeTeam() {
-        return homeTeam;
-    }
-
-    public String getAwayTeam() {
-        return awayTeam;
-    }
-
-
-    public long getStartTime() {
-        return startTime;
+    public Match updateScore (int homeScore, int awayScore) {
+        if (homeScore < 0 || awayScore < 0) {
+            throw new IllegalArgumentException("Scores cannot be negative");
+        }
+       return new Match(homeTeam, awayTeam, homeScore, awayScore, startTime);
     }
 
     public int getTotalScore() {
         return homeScore + awayScore;
     }
 
-    public void updateScore (int homeScore, int awayScore) {
-        if (homeScore < 0 || awayScore < 0) {
-            throw new IllegalArgumentException("Scores cannot be negative");
-        }
-        this.homeScore = homeScore;
-        this.awayScore = awayScore;
-    }
-
-    @Override
-    public String toString() {
+    public String getSummary() {
         return homeTeam + " " + homeScore + "-" + awayScore + " " + awayTeam;
     }
 }

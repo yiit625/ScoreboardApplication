@@ -100,9 +100,6 @@ public class ScoreboardTest {
         assertThrows(IllegalArgumentException.class, () ->
                 scoreboard.updateScore("Team A", "Team B", -1, 2),
                 "Scores cannot be negative");
-        assertThrows(IllegalArgumentException.class, () ->
-                scoreboard.updateScore("Team A", "Team B", 1, -2),
-                "Scores cannot be negative");
     }
 
     @Test

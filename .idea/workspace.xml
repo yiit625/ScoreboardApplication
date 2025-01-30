@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="CLI has been implemented">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/comparator/MatchComparator.java" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Removed unused import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/comparator/MatchComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/comparator/MatchComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="14364000" />
+      <workItem from="1738232849018" duration="15114000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -294,7 +293,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738247749432</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Small code reviews, increased readability">
+      <option name="closed" value="true" />
+      <created>1738250391473</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738250391473</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Removed unused import">
+      <option name="closed" value="true" />
+      <created>1738250409718</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1738250409718</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +357,8 @@
     <MESSAGE value="Some edge case tests have been implemented" />
     <MESSAGE value="Edge case have been covered" />
     <MESSAGE value="CLI has been implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="CLI has been implemented" />
+    <MESSAGE value="Small code reviews, increased readability" />
+    <MESSAGE value="Removed unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused import" />
   </component>
 </project>
