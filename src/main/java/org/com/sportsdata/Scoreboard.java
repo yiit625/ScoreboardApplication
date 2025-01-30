@@ -32,7 +32,8 @@ public class Scoreboard {
 
     public List<String> getSummary() {
         return matches.stream()
-                .sorted(Comparator.comparingInt(Match :: getTotalScore))
+                .sorted(Comparator.comparingInt(Match :: getTotalScore)
+                        .thenComparing(Match::getStartTime).reversed())
                 .map(Match::toString)
                 .toList();
     }
