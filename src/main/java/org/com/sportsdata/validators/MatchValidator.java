@@ -5,7 +5,7 @@ import org.com.sportsdata.model.Match;
 import java.util.List;
 
 public class MatchValidator {
-    public static void validateTeams(String homeTeam, String awayTeam, List<Match> matches) {
+    public static void validateTeams(List<Match> matches, String homeTeam, String awayTeam) {
         if (homeTeam == null || awayTeam == null || homeTeam.isBlank() || awayTeam.isBlank()) {
             throw new IllegalArgumentException("Team names cannot be blank");
         }
