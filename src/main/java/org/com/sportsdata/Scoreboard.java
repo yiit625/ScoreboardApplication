@@ -28,7 +28,7 @@ public class Scoreboard {
         matches.remove(match);
     }
 
-    public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
+   public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
         MatchValidator.validateScores(homeScore, awayScore);
         Match match = MatchFinder.findMatch(matches, homeTeam, awayTeam);
         matches.remove(match);
@@ -36,9 +36,11 @@ public class Scoreboard {
     }
 
     public List<String> getSummary() {
-        return matches.stream()
-                .sorted(new MatchComparator())
-                .map(Match::getSummary)
-                .toList();
+        return List.copyOf(
+                matches.stream()
+                        .sorted(new MatchComparator())
+                        .map(Match::getSummary)
+                        .toList()
+        );
     }
 }
