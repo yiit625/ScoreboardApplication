@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Should return Summary Order by Total Score for same total score test is implemented">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,19 +60,6 @@
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.ScoreboardTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
-      <module name="ScoreboardApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ScoreboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
@@ -89,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldStartNewMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardTest.shouldNotFinishingNonExistentMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -99,7 +85,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata" />
       <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldStartNewMatch" />
+      <option name="METHOD_NAME" value="shouldNotFinishingNonExistentMatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoreboardTest.shouldNotStartMatchWithSameTeamsTwice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldNotStartMatchWithSameTeamsTwice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoreboardTest.shouldNotUpdateScoreForNonExistentMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldNotUpdateScoreForNonExistentMatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoreboardTest.shouldReturnEmptySummaryWhenNoMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldReturnEmptySummaryWhenNoMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,8 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ScoreboardTest" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatch" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldReturnEmptySummaryWhenNoMatch" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotFinishingNonExistentMatch" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotUpdateScoreForNonExistentMatch" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotStartMatchWithSameTeamsTwice" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="6975000" />
+      <workItem from="1738232849018" duration="10443000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -227,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738242565699</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed">
+      <option name="closed" value="true" />
+      <created>1738242958220</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738242958220</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +315,7 @@
     <MESSAGE value="Should Return Summary Order by Total Score Test is implemented" />
     <MESSAGE value="Return Summary Order by Total Score is implemented" />
     <MESSAGE value="Should return Summary Order by Total Score for same total score test is implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Should return Summary Order by Total Score for same total score test is implemented" />
+    <MESSAGE value="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed" />
   </component>
 </project>
