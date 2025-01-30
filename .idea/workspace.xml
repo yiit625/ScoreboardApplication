@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Clocked has been replaced with nano time">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Returned an unmodifiable list in getSummary()">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="23163000" />
+      <workItem from="1738232849018" duration="23504000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -388,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738259769535</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Returned an unmodifiable list in getSummary()">
+      <option name="closed" value="true" />
+      <created>1738260304829</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1738260304830</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +430,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Should Start Match test is implemented" />
     <MESSAGE value="Should Start Match and Match model has been implemented" />
     <MESSAGE value="Should Finish Match Test is implemented" />
     <MESSAGE value="Finish match is implemented, Match model and Start new Match is updated." />
@@ -447,7 +454,8 @@
     <MESSAGE value="Removed unused import statement" />
     <MESSAGE value="Clean code" />
     <MESSAGE value="Clocked has been replaced with nano time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clocked has been replaced with nano time" />
+    <MESSAGE value="Returned an unmodifiable list in getSummary()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Returned an unmodifiable list in getSummary()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
