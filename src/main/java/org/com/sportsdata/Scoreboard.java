@@ -4,7 +4,6 @@ import org.com.sportsdata.comparator.MatchComparator;
 import org.com.sportsdata.model.Match;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
