@@ -9,7 +9,7 @@ public class ScoreboardTest {
     @Test
     void shouldStartNewMatch() {
         Scoreboard scoreboard = new Scoreboard();
-        scoreboard.startMatch("Team A", "Team B");
+        scoreboard.startMatch();
         assertEquals(1, scoreboard.getMatchesInProgress().size());
     }
 }
