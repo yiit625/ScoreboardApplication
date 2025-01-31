@@ -1,6 +1,6 @@
-package com.sportsdata;
+package com.sportsdata.service;
 
-import org.com.sportsdata.Scoreboard;
+import org.com.sportsdata.service.Scoreboard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

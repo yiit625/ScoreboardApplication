@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="NumberFormatException added in order to down application if user enter string values for score">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Catch error in order to avoid termination of the project -- Implementation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +60,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ScoreboardTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
+  <component name="RunManager" selected="JUnit.ScoreboardTest (1)">
+    <configuration name="ScoreboardTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.*" />
+          <option name="PATTERN" value="com.sportsdata.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ScoreboardTest (1)" />
         <item itemvalue="JUnit.ScoreboardTest" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowNegativeScores" />
         <item itemvalue="JUnit.ScoreboardTest.shouldValidateTeamNames" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="43247000" />
+      <workItem from="1738232849018" duration="44356000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -461,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738329922241</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Catch error in order to avoid termination of the project.">
+      <option name="closed" value="true" />
+      <created>1738334903675</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1738334903676</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Catch error in order to avoid termination of the project -- Implementation.">
+      <option name="closed" value="true" />
+      <created>1738334920806</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1738334920806</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,8 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed" />
-    <MESSAGE value="Some edge case tests have been implemented" />
     <MESSAGE value="Edge case have been covered" />
     <MESSAGE value="CLI has been implemented" />
     <MESSAGE value="Small code reviews, increased readability" />
@@ -520,7 +537,9 @@
     <MESSAGE value="Created custom exceptions" />
     <MESSAGE value="Test updates in order to avoid same places twice" />
     <MESSAGE value="NumberFormatException added in order to down application if user enter string values for score" />
-    <option name="LAST_COMMIT_MESSAGE" value="NumberFormatException added in order to down application if user enter string values for score" />
+    <MESSAGE value="Catch error in order to avoid termination of the project." />
+    <MESSAGE value="Catch error in order to avoid termination of the project -- Implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Catch error in order to avoid termination of the project -- Implementation." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

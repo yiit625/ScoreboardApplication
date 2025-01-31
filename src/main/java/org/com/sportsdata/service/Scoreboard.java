@@ -1,4 +1,4 @@
-package org.com.sportsdata;
+package org.com.sportsdata.service;
 
 import org.com.sportsdata.comparator.MatchComparator;
 import org.com.sportsdata.exceptions.MatchNotFoundException;

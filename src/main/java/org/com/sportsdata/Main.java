@@ -1,5 +1,7 @@
 package org.com.sportsdata;
 
+import org.com.sportsdata.service.Scoreboard;
+
 import java.time.Clock;
 import java.util.Scanner;
 
