@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="unused command lines">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/MatchNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/ScoreException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/TeamNameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Created custom exceptions">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="35812000" />
+      <workItem from="1738232849018" duration="36070000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -438,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738321319007</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Created custom exceptions">
+      <option name="closed" value="true" />
+      <created>1738322700864</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1738322700864</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Should Return Summary Order by Total Score Test is implemented" />
     <MESSAGE value="Return Summary Order by Total Score is implemented" />
     <MESSAGE value="Should return Summary Order by Total Score for same total score test is implemented" />
     <MESSAGE value="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed" />
@@ -497,7 +501,8 @@
     <MESSAGE value="Validation centralized, remove-add structure has been fixed, Collection has been updated" />
     <MESSAGE value="Instead of modifying the matches map, returned a new updated version of Match in order to protect immutability." />
     <MESSAGE value="unused command lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="unused command lines" />
+    <MESSAGE value="Created custom exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created custom exceptions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

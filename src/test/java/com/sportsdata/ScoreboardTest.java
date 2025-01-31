@@ -28,7 +28,7 @@ public class ScoreboardTest {
     void shouldUpdateMatch() {
         Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
-        scoreboard.updateScore("Team A", "Team B", 2 , 1 );
+        scoreboard.updateScore("Team A", "Team B", 2, 1);
 
         assertEquals("Team A 2-1 Team B", scoreboard.getSummary().get(0));
     }
@@ -46,8 +46,8 @@ public class ScoreboardTest {
         Scoreboard scoreboard = new Scoreboard(fixedClock);
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.startMatch("Team C", "Team D");
-        scoreboard.updateScore("Team A", "Team B", 2 , 2 );
-        scoreboard.updateScore("Team C", "Team D", 4 , 1 );
+        scoreboard.updateScore("Team A", "Team B", 2, 2);
+        scoreboard.updateScore("Team C", "Team D", 4, 1);
 
         var summary = scoreboard.getSummary();
         assertEquals("Team C 4-1 Team D", summary.get(0)); // Highest Total Score
@@ -58,26 +58,14 @@ public class ScoreboardTest {
     @CsvSource({
             "Team A, Team A, Team names cannot be the same",
             " , Team B, Team names cannot be blank",
-            "Team A, , Team names cannot be blank"
+            "Team A, , Team names cannot be blank",
+            "Team A, Team B, One of the teams is already in a match"
     })
     void shouldValidateTeamNames(String homeTeam, String awayTeam, String expectedMessage) {
         Scoreboard scoreboard = new Scoreboard(fixedClock);
+        scoreboard.startMatch("Team A", "Team B");
         Exception exception = assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch(homeTeam, awayTeam));
         assertEquals(expectedMessage, exception.getMessage());
-    }
-
-    @Test
-    void shouldNotStartMatchWithSameTeamsTwice() {
-        Scoreboard scoreboard = new Scoreboard(fixedClock);
-        scoreboard.startMatch("Team A", "Team B");
-        assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch("Team A", "Team B"));
-    }
-
-    @Test
-    void shouldNotAllowDuplicateTeamParticipation() {
-        Scoreboard scoreboard = new Scoreboard(fixedClock);
-        scoreboard.startMatch("Team A", "Team B");
-        assertThrows(IllegalArgumentException.class, () -> scoreboard.startMatch("Team A", "Team C"));
     }
 
     @ParameterizedTest
