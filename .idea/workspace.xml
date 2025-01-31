@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Returned an unmodifiable list in getSummary()">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="To avoid case-sensitive mismatches">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldNotAllowDuplicateTeamParticipation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
@@ -120,29 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldUpdateMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ScoreboardApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sportsdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sportsdata" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldUpdateMatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ScoreboardTest" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatchWithMockedClock" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldUpdateMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +155,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="23504000" />
+      <workItem from="1738232849018" duration="30072000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -396,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738260304830</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="To avoid case-sensitive mismatches">
+      <option name="closed" value="true" />
+      <created>1738260685361</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1738260685361</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +439,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Should Start Match and Match model has been implemented" />
     <MESSAGE value="Should Finish Match Test is implemented" />
     <MESSAGE value="Finish match is implemented, Match model and Start new Match is updated." />
     <MESSAGE value="Should Update Match Score Test is implemented" />
@@ -455,7 +463,8 @@
     <MESSAGE value="Clean code" />
     <MESSAGE value="Clocked has been replaced with nano time" />
     <MESSAGE value="Returned an unmodifiable list in getSummary()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Returned an unmodifiable list in getSummary()" />
+    <MESSAGE value="To avoid case-sensitive mismatches" />
+    <option name="LAST_COMMIT_MESSAGE" value="To avoid case-sensitive mismatches" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

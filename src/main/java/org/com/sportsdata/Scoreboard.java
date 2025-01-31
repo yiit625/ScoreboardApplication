@@ -19,7 +19,6 @@ public class Scoreboard {
 
     public void startMatch(String homeTeam, String awayTeam) {
         MatchValidator.validateTeams(matches, homeTeam, awayTeam);
-        MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
         matches.add(new Match(homeTeam, awayTeam, clock));
     }
 

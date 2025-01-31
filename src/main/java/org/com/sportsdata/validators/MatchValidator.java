@@ -12,23 +12,15 @@ public class MatchValidator {
         if (homeTeam.equals(awayTeam)) {
             throw new IllegalArgumentException("Team names cannot be the same");
         }
-        if (matches.stream().anyMatch(m -> m.homeTeam().equals(homeTeam))) {
-            throw new IllegalArgumentException(homeTeam + " is currently in match");
-        }
-        if (matches.stream().anyMatch(m -> m.awayTeam().equals(awayTeam))) {
-            throw new IllegalArgumentException(awayTeam + " is currently in match");
+        if (matches.stream().anyMatch(m -> m.homeTeam().equals(homeTeam) || m.awayTeam().equals(homeTeam) ||
+                m.homeTeam().equals(awayTeam) || m.awayTeam().equals(awayTeam))) {
+            throw new IllegalArgumentException("One of the teams is already in a match");
         }
     }
 
     public static void validateScores(int homeScore, int awayScore) {
         if (homeScore < 0 || awayScore < 0) {
             throw new IllegalArgumentException("Scores cannot be negative");
-        }
-    }
-
-    public static void validateMatchExists(List<Match> matches, String homeTeam, String awayTeam ) {
-        if (matches.stream().anyMatch(m -> m.homeTeam().equals(homeTeam) && m.awayTeam().equals(awayTeam))) {
-            throw new IllegalArgumentException("Match between these teams is already in progress");
         }
     }
 }
