@@ -34,8 +34,10 @@ public class Scoreboard {
        MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
 
        String key = MatchFinder.getMatchKey(homeTeam, awayTeam);
-       Match match = matches.get(key);
-       matches.put(key, match.updateScore(homeScore, awayScore));
+       matches.computeIfPresent(key, (k, match) -> match.updateScore(homeScore, awayScore));
+
+       // Match match = matches.get(key);
+       // matches.put(key, match.updateScore(homeScore, awayScore));
     }
 
     public List<String> getSummary() {
