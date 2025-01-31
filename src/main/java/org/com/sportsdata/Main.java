@@ -19,19 +19,23 @@ public class Main {
                     System.out.println("Away Team: ");
                     String away = scanner.nextLine();
                     scoreboard.startMatch(home, away);
-                    System.out.println("Match started!");
                 }
                 case "update" -> {
                     System.out.println("Home Team: ");
                     String home = scanner.nextLine();
                     System.out.println("Away Team: ");
                     String away = scanner.nextLine();
-                    System.out.println("Home Score: ");
-                    int homeScore = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Away Score: ");
-                    int awayScore = Integer.parseInt(scanner.nextLine());
-                    scoreboard.updateScore(home, away, homeScore, awayScore);
-                    System.out.println("Match updated!");
+                    int homeScore;
+                    int awayScore;
+                    try {
+                        System.out.println("Home Score: ");
+                        homeScore = Integer.parseInt(scanner.nextLine());
+                        System.out.println("Away Score: ");
+                        awayScore = Integer.parseInt(scanner.nextLine());
+                        scoreboard.updateScore(home, away, homeScore, awayScore);
+                    } catch (NumberFormatException e) {
+                        System.err.println("Invalid score input. Scores must be numeric.");
+                    }
                 }
                 case "finish" -> {
                     System.out.println("Home Team: ");
@@ -39,7 +43,6 @@ public class Main {
                     System.out.println("Away Team: ");
                     String away = scanner.nextLine();
                     scoreboard.finishMatch(home, away);
-                    System.out.println("Match finished!");
                 }
                 case "summary" -> {
                     System.out.println("Live Matches: ");
