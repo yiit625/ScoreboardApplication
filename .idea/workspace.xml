@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="To avoid case-sensitive mismatches">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Removed duplicated checks to decrease boilerplate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,8 +141,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ScoreboardTest" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" />
         <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatchWithMockedClock" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" />
       </list>
@@ -155,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="30072000" />
+      <workItem from="1738232849018" duration="32858000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -405,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738260685361</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Removed duplicated checks to decrease boilerplate">
+      <option name="closed" value="true" />
+      <created>1738315042694</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1738315042694</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Should Finish Match Test is implemented" />
     <MESSAGE value="Finish match is implemented, Match model and Start new Match is updated." />
     <MESSAGE value="Should Update Match Score Test is implemented" />
     <MESSAGE value="Update Match Score is implemented" />
@@ -464,7 +472,8 @@
     <MESSAGE value="Clocked has been replaced with nano time" />
     <MESSAGE value="Returned an unmodifiable list in getSummary()" />
     <MESSAGE value="To avoid case-sensitive mismatches" />
-    <option name="LAST_COMMIT_MESSAGE" value="To avoid case-sensitive mismatches" />
+    <MESSAGE value="Removed duplicated checks to decrease boilerplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed duplicated checks to decrease boilerplate" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

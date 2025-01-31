@@ -6,11 +6,13 @@ import org.com.sportsdata.util.MatchFinder;
 import org.com.sportsdata.validators.MatchValidator;
 
 import java.time.Clock;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Scoreboard {
-    private final List<Match> matches = new ArrayList<>();
+    private final Map<String, Match> matches = new HashMap<>();
     private final Clock clock;
 
     public Scoreboard(Clock clock) {
@@ -18,25 +20,27 @@ public class Scoreboard {
     }
 
     public void startMatch(String homeTeam, String awayTeam) {
-        MatchValidator.validateTeams(matches, homeTeam, awayTeam);
-        matches.add(new Match(homeTeam, awayTeam, clock));
+        MatchValidator.validateTeams(new ArrayList<>(matches.values()), homeTeam, awayTeam);
+        matches.put(MatchFinder.getMatchKey(homeTeam, awayTeam), new Match(homeTeam, awayTeam, clock));
     }
 
     public void finishMatch(String homeTeam, String awayTeam) {
-        Match match = MatchFinder.findMatch(matches, homeTeam, awayTeam);
-        matches.remove(match);
+        MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
+        matches.remove(MatchFinder.getMatchKey(homeTeam, awayTeam));
     }
 
    public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
-        MatchValidator.validateScores(homeScore, awayScore);
-        Match match = MatchFinder.findMatch(matches, homeTeam, awayTeam);
-        matches.remove(match);
-        matches.add(match.updateScore(homeScore, awayScore));
+       MatchValidator.validateScores(homeScore, awayScore);
+       MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
+
+       String key = MatchFinder.getMatchKey(homeTeam, awayTeam);
+       Match match = matches.get(key);
+       matches.put(key, match.updateScore(homeScore, awayScore));
     }
 
     public List<String> getSummary() {
         return List.copyOf(
-                matches.stream()
+                matches.values().stream()
                         .sorted(new MatchComparator())
                         .map(Match::getSummary)
                         .toList()
