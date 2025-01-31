@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Created custom exceptions">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="NumberFormatException added in order to down application if user enter string values for score">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Scoreboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardTest.shouldNotAllowNegativeScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -97,13 +99,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata" />
       <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldNotAllowDuplicateTeamParticipation" />
+      <option name="METHOD_NAME" value="shouldNotAllowNegativeScores(int,int,java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -113,13 +115,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata" />
       <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldNotAllowedToAddSameTeamIfItIsInMatch" />
+      <option name="METHOD_NAME" value="shouldNotUpdateScoreOrFinishNonExistentMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldStartNewMatchWithMockedClock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardTest.shouldValidateTeamNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata" />
       <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldStartNewMatchWithMockedClock" />
+      <option name="METHOD_NAME" value="shouldValidateTeamNames(java.lang.String,java.lang.String,java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,10 +140,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ScoreboardTest" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowNegativeScores" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldValidateTeamNames" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowDuplicateTeamParticipation" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldStartNewMatchWithMockedClock" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowedToAddSameTeamIfItIsInMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +155,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="36070000" />
+      <workItem from="1738232849018" duration="43247000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -443,7 +445,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738322700864</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Test updates in order to avoid same places twice">
+      <option name="closed" value="true" />
+      <created>1738322924099</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1738322924099</updated>
+    </task>
+    <task id="LOCAL-00038" summary="NumberFormatException added in order to down application if user enter string values for score">
+      <option name="closed" value="true" />
+      <created>1738329922240</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1738329922241</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,8 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Return Summary Order by Total Score is implemented" />
-    <MESSAGE value="Should return Summary Order by Total Score for same total score test is implemented" />
     <MESSAGE value="Return Summary Order by Total Score for same total score test is implemented, Some small bugs related to test file are fixed" />
     <MESSAGE value="Some edge case tests have been implemented" />
     <MESSAGE value="Edge case have been covered" />
@@ -502,7 +518,9 @@
     <MESSAGE value="Instead of modifying the matches map, returned a new updated version of Match in order to protect immutability." />
     <MESSAGE value="unused command lines" />
     <MESSAGE value="Created custom exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created custom exceptions" />
+    <MESSAGE value="Test updates in order to avoid same places twice" />
+    <MESSAGE value="NumberFormatException added in order to down application if user enter string values for score" />
+    <option name="LAST_COMMIT_MESSAGE" value="NumberFormatException added in order to down application if user enter string values for score" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
