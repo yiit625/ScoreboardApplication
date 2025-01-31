@@ -35,9 +35,6 @@ public class Scoreboard {
 
        String key = MatchFinder.getMatchKey(homeTeam, awayTeam);
        matches.computeIfPresent(key, (k, match) -> match.updateScore(homeScore, awayScore));
-
-       // Match match = matches.get(key);
-       // matches.put(key, match.updateScore(homeScore, awayScore));
     }
 
     public List<String> getSummary() {
