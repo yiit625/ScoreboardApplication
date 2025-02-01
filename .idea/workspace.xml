@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Directory has been updated">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/model/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/comparator/MatchComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/comparator/MatchComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/MatchNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/MatchNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/ScoreException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/ScoreException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/TeamNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/exceptions/TeamNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/util/MatchFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/validators/MatchValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ScoreboardTest (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
       <module name="ScoreboardApplication" />
@@ -140,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScoreboardTest (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ScoreboardTest (1)" />
         <item itemvalue="JUnit.ScoreboardTest" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" />
         <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowNegativeScores" />
@@ -156,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="52183000" />
+      <workItem from="1738232849018" duration="53604000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -486,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738337443456</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match">
+      <option name="closed" value="true" />
+      <created>1738426715933</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1738426715933</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CLI has been implemented" />
     <MESSAGE value="Small code reviews, increased readability" />
     <MESSAGE value="Removed unused import" />
     <MESSAGE value="Small code reviews, Using records to increase readability" />
@@ -545,7 +556,8 @@
     <MESSAGE value="Catch error in order to avoid termination of the project." />
     <MESSAGE value="Catch error in order to avoid termination of the project -- Implementation." />
     <MESSAGE value="Directory has been updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Directory has been updated" />
+    <MESSAGE value="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738255418938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
