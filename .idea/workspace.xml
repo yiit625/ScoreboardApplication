@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Java Docs have been added">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Updated readme file">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -57,6 +62,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,111 +74,88 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ScoreboardTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.Main" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.com.sportsdata.validators" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MatchValidatorTest">
+    <configuration name="MatchValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.*" />
+          <option name="PATTERN" value="org.com.sportsdata.validators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScoreboardTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="ScoreboardApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sportsdata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sportsdata" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="org.com.sportsdata.validators" />
+      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.validators.MatchValidatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="ScoreboardApplication" />
-      <extension name="coverage" sample_coverage="false" track_test_folders="true">
-        <pattern>
-          <option name="PATTERN" value="com.sportsdata.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.model.Match" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.comparator.MatchComparator" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.util.MatchFinder" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.validators.MatchValidator" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.service.Scoreboard" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.exceptions.MatchNotFoundException" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.exceptions.ScoreException" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="org.com.sportsdata.exceptions.TeamNameException" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sportsdata.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScoreboardTest.shouldNotAllowNegativeScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchValidatorTest.shouldValidateTeamNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="PATTERN" value="org.com.sportsdata.validators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sportsdata" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldNotAllowNegativeScores(int,int,java.lang.String)" />
+      <option name="PACKAGE_NAME" value="org.com.sportsdata.validators" />
+      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.validators.MatchValidatorTest" />
+      <option name="METHOD_NAME" value="shouldValidateTeamNames(java.lang.String,java.lang.String,java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatchValidatorTest.validateScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sportsdata.*" />
+          <option name="PATTERN" value="org.com.sportsdata.validators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sportsdata" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.ScoreboardTest" />
-      <option name="METHOD_NAME" value="shouldNotUpdateScoreOrFinishNonExistentMatch" />
+      <option name="PACKAGE_NAME" value="org.com.sportsdata.validators" />
+      <option name="MAIN_CLASS_NAME" value="org.com.sportsdata.validators.MatchValidatorTest" />
+      <option name="METHOD_NAME" value="validateScores(int,int,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoreboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScoreboardTest.shouldReturnSummaryOrderByTotalScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ScoreboardApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sportsdata.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sportsdata.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
+      <option name="METHOD_NAME" value="shouldReturnSummaryOrderByTotalScore" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MatchValidatorTest" />
         <item itemvalue="JUnit.ScoreboardTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ScoreboardTest" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotUpdateScoreOrFinishNonExistentMatch" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldNotAllowNegativeScores" />
+        <item itemvalue="JUnit.ScoreboardTest.shouldReturnSummaryOrderByTotalScore" />
+        <item itemvalue="JUnit.MatchValidatorTest.validateScores" />
+        <item itemvalue="JUnit.MatchValidatorTest.shouldValidateTeamNames" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="57218000" />
+      <workItem from="1738232849018" duration="61919000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -541,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738428002282</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Updated readme file">
+      <option name="closed" value="true" />
+      <created>1738432218958</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1738432218959</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed unused import" />
     <MESSAGE value="Small code reviews, Using records to increase readability" />
     <MESSAGE value="Validators have been removed to the new class in order to increase readability." />
     <MESSAGE value="shouldNotAllowedToAddSameTeamIfItIsInMatch added as one more edge case test" />
@@ -600,7 +591,8 @@
     <MESSAGE value="Directory has been updated" />
     <MESSAGE value="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match" />
     <MESSAGE value="Java Docs have been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java Docs have been added" />
+    <MESSAGE value="Updated readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated readme file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738430867256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">

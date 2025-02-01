@@ -7,6 +7,8 @@ import org.com.sportsdata.exceptions.TeamNameException;
 import org.com.sportsdata.model.Match;
 import org.com.sportsdata.util.MatchFinder;
 import org.com.sportsdata.validators.MatchValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Clock;
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * It also provides a summary of the current matches.
  */
 public class Scoreboard {
+    private static final Logger logger = LoggerFactory.getLogger(Scoreboard.class);
     private final Map<String, Match> matches = new ConcurrentHashMap<>();
     private final Clock clock;
 
@@ -44,9 +47,8 @@ public class Scoreboard {
             MatchValidator.validateTeams(new ArrayList<>(matches.values()), homeTeam, awayTeam);
 
             matches.put(MatchFinder.getMatchKey(homeTeam, awayTeam), new Match(homeTeam, awayTeam, clock));
-            System.out.println("Match started!");
         } catch (TeamNameException e) {
-            System.err.println("Failed to start match: " + e.getMessage());
+            logger.error("Failed to start match: " + e.getMessage());
         }
     }
 
@@ -62,9 +64,8 @@ public class Scoreboard {
             MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
 
             matches.remove(MatchFinder.getMatchKey(homeTeam, awayTeam));
-            System.out.println("Match finished!");
         } catch (MatchNotFoundException e) {
-            System.err.println("Failed to finish match: " + e.getMessage());
+            logger.error("Failed to finish match: " + e.getMessage());
         }
     }
 
@@ -85,9 +86,8 @@ public class Scoreboard {
 
             matches.compute(MatchFinder.getMatchKey(homeTeam, awayTeam), (k, match) ->
                     match != null ? match.updateScore(homeScore, awayScore) : null);
-            System.out.println("Match updated!");
         } catch (ScoreException | MatchNotFoundException e) {
-            System.err.println("Failed to update score: " + e.getMessage());
+            logger.error("Failed to update match: " + e.getMessage());
         }
     }
 
