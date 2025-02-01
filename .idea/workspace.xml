@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Updated readme file">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Implementation">
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +174,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="61919000" />
+      <workItem from="1738232849018" duration="61993000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -533,7 +528,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738432218959</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Test structure has been updated">
+      <option name="closed" value="true" />
+      <created>1738436711633</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1738436711633</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Implementation">
+      <option name="closed" value="true" />
+      <created>1738436726194</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1738436726194</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,8 +578,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small code reviews, Using records to increase readability" />
-    <MESSAGE value="Validators have been removed to the new class in order to increase readability." />
     <MESSAGE value="shouldNotAllowedToAddSameTeamIfItIsInMatch added as one more edge case test" />
     <MESSAGE value="if the team is in the match, cannot start for next match before finish it." />
     <MESSAGE value="Duplicated tests have been removed and Some tests have been parameterized" />
@@ -592,7 +601,9 @@
     <MESSAGE value="Java Docs added for both class. Replaced computeIfAbsent with compute since we already validate that match" />
     <MESSAGE value="Java Docs have been added" />
     <MESSAGE value="Updated readme file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated readme file" />
+    <MESSAGE value="Test structure has been updated" />
+    <MESSAGE value="Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738430867256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">

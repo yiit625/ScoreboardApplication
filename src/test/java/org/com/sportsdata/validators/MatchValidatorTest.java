@@ -34,9 +34,8 @@ class MatchValidatorTest {
             "Team A, Team B, One of the teams is already in a match"
     })
     void shouldValidateTeamNames(String homeTeam, String awayTeam, String expectedMessage) {
-        TeamNameException exception = assertThrows(TeamNameException.class, () -> {
-            MatchValidator.validateTeams(mock.values().stream().toList(), homeTeam, awayTeam);
-        });
+        TeamNameException exception = assertThrows(TeamNameException.class, () ->
+                MatchValidator.validateTeams(mock.values().stream().toList(), homeTeam, awayTeam));
         assertEquals(expectedMessage, exception.getMessage());
     }
 
@@ -46,17 +45,15 @@ class MatchValidatorTest {
             "2, -1, Scores cannot be negative"
     })
     void validateScores(int homeScore, int awayScore, String expectedMessage) {
-       ScoreException exception = assertThrows(ScoreException.class, () -> {
-           MatchValidator.validateScores(homeScore, awayScore);
-       });
+       ScoreException exception = assertThrows(ScoreException.class, () ->
+               MatchValidator.validateScores(homeScore, awayScore));
        assertEquals(expectedMessage, exception.getMessage());
     }
 
     @Test
     void validateMatchExists() {
-        MatchNotFoundException exception = assertThrows(MatchNotFoundException.class, () -> {
-            MatchValidator.validateMatchExists(mock, "Team X", "Team Y");
-        });
+        MatchNotFoundException exception = assertThrows(MatchNotFoundException.class, () ->
+                MatchValidator.validateMatchExists(mock, "Team X", "Team Y"));
         assertEquals("Match cannot be found.", exception.getMessage());
     }
 }
