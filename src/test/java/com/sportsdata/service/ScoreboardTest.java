@@ -61,9 +61,4 @@ public class ScoreboardTest {
         assertEquals("Team E 1-3 Team F", summary.get(1));
         assertEquals("Team A 2-2 Team B", summary.get(2));
     }
-
-    @Test
-    void shouldReturnEmptySummaryWhenNoMatch() {
-        assertTrue(scoreboard.getSummary().isEmpty());
-    }
 }

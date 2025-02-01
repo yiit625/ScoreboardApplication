@@ -20,11 +20,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class MatchValidatorTest {
     Clock fixedClock = Clock.fixed(Instant.parse("2024-01-30T12:00:00Z"), ZoneId.of("UTC"));
     Map<String, Match> mock = new ConcurrentHashMap<>();
+
     @BeforeEach
     void setUp() {
         mock.put("TeamA-TeamB", new Match("Team A", "Team B", fixedClock));
     }
-
 
     @ParameterizedTest
     @CsvSource({
