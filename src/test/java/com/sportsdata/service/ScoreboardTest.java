@@ -4,8 +4,6 @@ import org.com.sportsdata.service.Scoreboard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.time.Clock;
 import java.time.Instant;
 import java.time.ZoneId;
@@ -15,13 +13,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ScoreboardTest {
     Clock fixedClock = Clock.fixed(Instant.parse("2024-01-30T12:00:00Z"), ZoneId.of("UTC"));
-    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private Scoreboard scoreboard;
 
     @BeforeEach
     void setUp() {
         scoreboard = new Scoreboard(fixedClock);
-        System.setErr(new PrintStream(errContent));
     }
 
     @Test

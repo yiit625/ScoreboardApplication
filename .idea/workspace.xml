@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Replace with exp lambda">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Deleted unused test, spaces">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/sportsdata/validators/MatchValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <recent name="org.com.sportsdata.validators" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MatchValidatorTest">
+  <component name="RunManager" selected="JUnit.ScoreboardTest">
     <configuration name="MatchValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
@@ -159,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MatchValidatorTest" />
         <item itemvalue="JUnit.ScoreboardTest" />
+        <item itemvalue="JUnit.MatchValidatorTest" />
         <item itemvalue="JUnit.ScoreboardTest.shouldReturnSummaryOrderByTotalScore" />
         <item itemvalue="JUnit.MatchValidatorTest.validateScores" />
         <item itemvalue="JUnit.MatchValidatorTest.shouldValidateTeamNames" />
@@ -175,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="62813000" />
+      <workItem from="1738232849018" duration="62865000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -553,7 +553,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738436816173</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Deleted unused test, spaces">
+      <option name="closed" value="true" />
+      <created>1738437972454</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1738437972455</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="if the team is in the match, cannot start for next match before finish it." />
     <MESSAGE value="Duplicated tests have been removed and Some tests have been parameterized" />
     <MESSAGE value="Validation removed from Match model" />
     <MESSAGE value="Moved functionality out of Scoreboard" />
@@ -612,7 +619,8 @@
     <MESSAGE value="Test structure has been updated" />
     <MESSAGE value="Implementation" />
     <MESSAGE value="Replace with exp lambda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace with exp lambda" />
+    <MESSAGE value="Deleted unused test, spaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted unused test, spaces" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738430867256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
