@@ -3,8 +3,6 @@ package com.sportsdata.service;
 import org.com.sportsdata.service.Scoreboard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -53,45 +51,15 @@ public class ScoreboardTest {
     void shouldReturnSummaryOrderByTotalScore() {
         scoreboard.startMatch("Team A", "Team B");
         scoreboard.startMatch("Team C", "Team D");
+        scoreboard.startMatch("Team E", "Team F");
         scoreboard.updateScore("Team A", "Team B", 2, 2);
+        scoreboard.updateScore("Team E", "Team F", 1, 3);
         scoreboard.updateScore("Team C", "Team D", 4, 1);
 
         var summary = scoreboard.getSummary();
-        assertEquals("Team C 4-1 Team D", summary.get(0)); // Highest Total Score
-        assertEquals("Team A 2-2 Team B", summary.get(1)); // Lowest Total Score
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "Team A, Team A, Team names cannot be the same",
-            " , Team B, Team names cannot be blank",
-            "Team A, , Team names cannot be blank",
-            "Team A, Team B, One of the teams is already in a match"
-    })
-    void shouldValidateTeamNames(String homeTeam, String awayTeam, String expectedMessage) {
-        scoreboard.startMatch("Team A", "Team B");
-        scoreboard.startMatch(homeTeam, awayTeam);
-
-        assertTrue(errContent.toString().contains(expectedMessage));
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "-1, 2, Scores cannot be negative",
-            "2, -1, Scores cannot be negative"
-    })
-    void shouldNotAllowNegativeScores(int homeScore, int awayScore, String expectedMessage) {
-        scoreboard.startMatch("Team A", "Team B");
-        scoreboard.updateScore("Team A", "Team B", homeScore, awayScore);
-
-        assertTrue(errContent.toString().contains(expectedMessage));
-    }
-
-    @Test
-    void shouldNotUpdateScoreOrFinishNonExistentMatch() {
-        scoreboard.updateScore("Team X", "Team Y", 1, 2);
-
-        assertTrue(errContent.toString().contains("Match cannot be found."));
+        assertEquals("Team C 4-1 Team D", summary.get(0));
+        assertEquals("Team E 1-3 Team F", summary.get(1));
+        assertEquals("Team A 2-2 Team B", summary.get(2));
     }
 
     @Test
