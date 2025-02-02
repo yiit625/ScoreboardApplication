@@ -48,7 +48,7 @@ public class ScoreboardServiceImpl implements ScoreboardService {
         try {
             MatchValidator.validateTeams(new ArrayList<>(matches.values()), homeTeam, awayTeam);
 
-            matches.put(MatchFinder.getMatchKey(homeTeam, awayTeam), new Match(homeTeam, awayTeam, clock));
+            matches.put(getMatchKey(homeTeam, awayTeam), new Match(homeTeam, awayTeam, clock));
         } catch (TeamNameException e) {
             logger.error("Failed to start match: " + e.getMessage());
         }
@@ -66,7 +66,7 @@ public class ScoreboardServiceImpl implements ScoreboardService {
         try {
             MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
 
-            matches.remove(MatchFinder.getMatchKey(homeTeam, awayTeam));
+            matches.remove(getMatchKey(homeTeam, awayTeam));
         } catch (MatchNotFoundException e) {
             logger.error("Failed to finish match: " + e.getMessage());
         }
@@ -88,7 +88,7 @@ public class ScoreboardServiceImpl implements ScoreboardService {
             MatchValidator.validateScores(homeScore, awayScore);
             MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
 
-            matches.compute(MatchFinder.getMatchKey(homeTeam, awayTeam), (k, match) ->
+            matches.compute(getMatchKey(homeTeam, awayTeam), (k, match) ->
                     match != null ? match.updateScore(homeScore, awayScore) : null);
         } catch (ScoreException | MatchNotFoundException e) {
             logger.error("Failed to update match: " + e.getMessage());
@@ -106,5 +106,16 @@ public class ScoreboardServiceImpl implements ScoreboardService {
                 .sorted(new MatchComparator())
                 .map(Match::getSummary)
                 .toList();
+    }
+
+    /**
+     * Retrieves String match key
+     *
+     * @param homeTeam The name of the home team
+     * @param awayTeam The name of the away team
+     * @return String match key
+     */
+    private static String getMatchKey(String homeTeam, String awayTeam) {
+        return MatchFinder.getMatchKey(homeTeam, awayTeam);
     }
 }

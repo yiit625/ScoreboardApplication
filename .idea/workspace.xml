@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Clean code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/ScoreboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/impl/ScoreboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardServiceImplTest.java" afterDir="false" />
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Interface has been created">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/impl/ScoreboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/impl/ScoreboardServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,15 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
       <workItem from="1738232849018" duration="64581000" />
-      <workItem from="1738501124725" duration="417000" />
-    </task>
-    <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
-      <option name="closed" value="true" />
-      <created>1738232957313</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1738232957313</updated>
+      <workItem from="1738501124725" duration="1924000" />
     </task>
     <task id="LOCAL-00002" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -572,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738438018483</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Interface has been created">
+      <option name="closed" value="true" />
+      <created>1738501899674</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1738501899688</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +603,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Duplicated tests have been removed and Some tests have been parameterized" />
     <MESSAGE value="Validation removed from Match model" />
     <MESSAGE value="Moved functionality out of Scoreboard" />
     <MESSAGE value="Removed unused import statement" />
@@ -631,7 +627,8 @@
     <MESSAGE value="Replace with exp lambda" />
     <MESSAGE value="Deleted unused test, spaces" />
     <MESSAGE value="Clean code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean code" />
+    <MESSAGE value="Interface has been created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface has been created" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738430867256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
