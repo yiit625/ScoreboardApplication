@@ -1,10 +1,11 @@
-package org.com.sportsdata.service;
+package org.com.sportsdata.service.impl;
 
 import org.com.sportsdata.comparator.MatchComparator;
 import org.com.sportsdata.exceptions.MatchNotFoundException;
 import org.com.sportsdata.exceptions.ScoreException;
 import org.com.sportsdata.exceptions.TeamNameException;
 import org.com.sportsdata.model.Match;
+import org.com.sportsdata.service.ScoreboardService;
 import org.com.sportsdata.util.MatchFinder;
 import org.com.sportsdata.validators.MatchValidator;
 import org.slf4j.Logger;
@@ -21,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * It provides methods to start, finish, and update scores for matches.
  * It also provides a summary of the current matches.
  */
-public class Scoreboard {
-    private static final Logger logger = LoggerFactory.getLogger(Scoreboard.class);
+public class ScoreboardServiceImpl implements ScoreboardService {
+    private static final Logger logger = LoggerFactory.getLogger(ScoreboardServiceImpl.class);
     private final Map<String, Match> matches = new ConcurrentHashMap<>();
     private final Clock clock;
 
@@ -31,7 +32,7 @@ public class Scoreboard {
      *
      * @param clock The Clock instance to use for obtaining the current time.
      */
-    public Scoreboard(Clock clock) {
+    public ScoreboardServiceImpl(Clock clock) {
         this.clock = clock;
     }
 
@@ -42,6 +43,7 @@ public class Scoreboard {
      * @param awayTeam The name of the away team.
      * @throws TeamNameException If the team names are invalid or a match between these teams is already in progress.
      */
+    @Override
     public void startMatch(String homeTeam, String awayTeam) {
         try {
             MatchValidator.validateTeams(new ArrayList<>(matches.values()), homeTeam, awayTeam);
@@ -59,6 +61,7 @@ public class Scoreboard {
      * @param awayTeam The name of the away team.
      * @throws MatchNotFoundException If no match is found for the given teams.
      */
+    @Override
     public void finishMatch(String homeTeam, String awayTeam) {
         try {
             MatchValidator.validateMatchExists(matches, homeTeam, awayTeam);
@@ -79,6 +82,7 @@ public class Scoreboard {
      * @throws ScoreException If the scores are invalid.
      * @throws MatchNotFoundException If no match is found for the given teams.
      */
+    @Override
     public void updateScore(String homeTeam, String awayTeam, int homeScore, int awayScore) {
         try {
             MatchValidator.validateScores(homeScore, awayScore);
@@ -96,6 +100,7 @@ public class Scoreboard {
      *
      * @return A list of strings, each representing the summary of an active match.
      */
+    @Override
     public List<String> getSummary() {
         return matches.values().stream()
                 .sorted(new MatchComparator())

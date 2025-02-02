@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Deleted unused test, spaces">
+    <list default="true" id="3f685184-5c93-4663-85d1-61ca72d6bb4b" name="Changes" comment="Clean code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/ScoreboardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/Scoreboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/com/sportsdata/service/impl/ScoreboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sportsdata/service/ScoreboardServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,23 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -78,7 +80,7 @@
       <recent name="org.com.sportsdata.validators" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ScoreboardTest">
+  <component name="RunManager" selected="JUnit.MatchValidatorTest">
     <configuration name="MatchValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
@@ -126,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -135,13 +137,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreboardTest.shouldReturnSummaryOrderByTotalScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ScoreboardServiceImplTest.shouldReturnSummaryOrderByTotalScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScoreboardApplication" />
       <extension name="coverage">
         <pattern>
@@ -150,7 +152,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sportsdata.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardTest" />
+      <option name="MAIN_CLASS_NAME" value="com.sportsdata.service.ScoreboardServiceImplTest" />
       <option name="METHOD_NAME" value="shouldReturnSummaryOrderByTotalScore" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -159,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ScoreboardTest" />
         <item itemvalue="JUnit.MatchValidatorTest" />
-        <item itemvalue="JUnit.ScoreboardTest.shouldReturnSummaryOrderByTotalScore" />
+        <item itemvalue="JUnit.ScoreboardServiceImplTest" />
+        <item itemvalue="JUnit.ScoreboardServiceImplTest.shouldReturnSummaryOrderByTotalScore" />
         <item itemvalue="JUnit.MatchValidatorTest.validateScores" />
         <item itemvalue="JUnit.MatchValidatorTest.shouldValidateTeamNames" />
       </list>
@@ -175,7 +177,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738232847459</updated>
-      <workItem from="1738232849018" duration="62865000" />
+      <workItem from="1738232849018" duration="64581000" />
+      <workItem from="1738501124725" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="Project Skeleton created automatically, nothing developed">
       <option name="closed" value="true" />
@@ -561,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738437972455</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Clean code">
+      <option name="closed" value="true" />
+      <created>1738438018483</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1738438018483</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +610,6 @@
     <MESSAGE value="Validation removed from Match model" />
     <MESSAGE value="Moved functionality out of Scoreboard" />
     <MESSAGE value="Removed unused import statement" />
-    <MESSAGE value="Clean code" />
     <MESSAGE value="Clocked has been replaced with nano time" />
     <MESSAGE value="Returned an unmodifiable list in getSummary()" />
     <MESSAGE value="To avoid case-sensitive mismatches" />
@@ -620,7 +630,8 @@
     <MESSAGE value="Implementation" />
     <MESSAGE value="Replace with exp lambda" />
     <MESSAGE value="Deleted unused test, spaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted unused test, spaces" />
+    <MESSAGE value="Clean code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ScoreboardApplication$ScoreboardTest.ic" NAME="ScoreboardTest Coverage Results" MODIFIED="1738430867256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">

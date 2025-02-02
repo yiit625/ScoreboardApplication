@@ -1,6 +1,7 @@
 package com.sportsdata.service;
 
-import org.com.sportsdata.service.Scoreboard;
+import org.com.sportsdata.service.impl.ScoreboardServiceImpl;
+import org.com.sportsdata.service.ScoreboardService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,13 +12,13 @@ import java.time.ZoneId;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScoreboardTest {
+public class ScoreboardServiceImplTest {
     Clock fixedClock = Clock.fixed(Instant.parse("2024-01-30T12:00:00Z"), ZoneId.of("UTC"));
-    private Scoreboard scoreboard;
+    private ScoreboardService scoreboard;
 
     @BeforeEach
     void setUp() {
-        scoreboard = new Scoreboard(fixedClock);
+        scoreboard = new ScoreboardServiceImpl(fixedClock);
     }
 
     @Test
